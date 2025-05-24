@@ -56,3 +56,18 @@ def logout_view(request):
 
 
 
+def student_biodata(request):
+    if request.method =='POST':
+        age=request.POST.get('age')
+        birth=request.POST.get('birth')
+        gender=request.POST.get('gender')
+        year=request.POST.get('year')
+        department=request.POST.get('department')
+        stream=request.POST.get('stream')
+        mobile_no=request.POST.get('mobile_no')
+        biodata.objects.create(age=age,birth=birth,gender=gender,year=year,department=department,stream=stream,mobile_no=mobile_no)
+        return redirect('student_biodata')
+
+    biodatas=biodata.objects.all()
+    return render(request,'biodata.html',{'biodatas':biodatas})
+
