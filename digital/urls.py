@@ -6,5 +6,7 @@ urlpatterns = [
     path ('student_form/',student_form, name='student_form'),
     path ('signup_view/',signup_view, name='signup'),
     path ('login_view/',login_view, name='login'),
-    path ('student_biodata/',student_biodata, name='student_biodata')
+    path ('student_biodata/',student_biodata, name='student_biodata'),
+    path ('edit_biodata/<int:pk>/',edit_biodata, name='edit_biodata'),
+    path ('delete_biodata/<int:pk>/',delete_biodata, name='delete_biodata')
 ]

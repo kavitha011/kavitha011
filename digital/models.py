@@ -6,8 +6,8 @@ class student(models.Model):
     rollno=models.IntegerField()
     email=models.EmailField()
 
-def __str__(self):
-    return self.name
+    def __str__(self):
+        return self.name
 
 class biodata(models.Model):
     age=models.IntegerField()
@@ -16,4 +16,10 @@ class biodata(models.Model):
     year=models.IntegerField()
     department=models.CharField(max_length=20)
     stream=models.CharField(max_length=20)
-    mobile_no=models.IntegerField()
+    mobile_no=models.CharField(max_length=20)
+    age=models.IntegerField()
+    department=models.CharField(max_length=20)
+    stream=models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.title
